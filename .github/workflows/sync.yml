@@ -1,28 +1,11 @@
-name: Wildberries to Supabase Sync
+name: Wildberries to Supabase Sync (OLD JS) - DISABLED
 
 on:
-  schedule:
-    - cron: '*/30 * * * *'  # Запускать каждые 30 минут
-  workflow_dispatch:         # Разрешить ручной запуск
+  workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          
-      - name: Install dependencies
-        run: npm install axios @supabase/supabase-js dotenv
-        
-      - name: Run synchronization
-        env:
-          WB_API_KEY: ${{ secrets.WB_API_KEY }}
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-        run: node sync.js
+      - name: Stop
+        run: echo "Old JS sync is disabled. Use wb_orders_sync.yml (Python) instead."
