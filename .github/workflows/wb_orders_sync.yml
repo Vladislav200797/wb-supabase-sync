@@ -31,8 +31,6 @@ jobs:
           WB_API_KEY: ${{ secrets.WB_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_KEY }}
-          # Разово (1 запуск) оставь 2025-12-29, потом удали/очисти
-          RELOAD_DAY: "2025-12-29"
           OVERLAP_MINUTES: "120"
           BATCH_SIZE: "500"
           WB_SLEEP_SECONDS: "65"
